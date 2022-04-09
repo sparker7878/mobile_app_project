@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="true"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    tools:context=".Add_Edit_Activity">
+
+    <TextView
+        android:id="@+id/txtTitleAdd"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="#F8D057"
+        android:fontFamily="sans-serif-medium"
+        android:text="Add New"
+        android:textAlignment="viewStart"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F0DB"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="469dp"
+            android:background="#FDFDFD"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="278dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etInputName"
+                        android:layout_width="221dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Food name"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/etInputBrand"
+                        android:layout_width="221dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Brand"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    android:text="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Tap the image to open the camera" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtServing"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Serving Size: "
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputServing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtCal"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Calories:"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="none|numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="changeDate"
+                    android:text="Select Date"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnEditDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="changeDate"
+                    android:text="Change Date"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtMeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meal Time"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="139dp">
+
+                <RadioButton
+                    android:id="@+id/rbBreakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Breakfast" />
+
+                <RadioButton
+                    android:id="@+id/rbLunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Lunch" />
+
+                <RadioButton
+                    android:id="@+id/rbDinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Dinner" />
+
+                <RadioButton
+                    android:id="@+id/rbSnack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Snack" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtNotes"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notes: "
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="187dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtCheckPrompt"
+                    android:layout_width="119dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="Edit food for all entries?" />
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCreateSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F8D057"
+            android:onClick="onSave"
+            android:text="Create"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCancel"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

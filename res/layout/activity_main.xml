@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#986BEA"
+        android:capitalize="none"
+        android:fontFamily="sans-serif-medium"
+        android:text="CALORIES ++"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="11dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        style="@android:style/Widget.DeviceDefault.Light.CalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusedMonthDateColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/txtDisplayDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food Logged For: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/allFoodList"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="#FFFFFF">
+
+    </ListView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:id="@+id/txtTotalCals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DFBAA1EA"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Total Calories:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#939295"
+            android:onClick="onAddNew"
+            android:text="Add" />
+
+    </LinearLayout>
+
+</LinearLayout>
